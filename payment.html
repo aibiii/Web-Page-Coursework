@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylePayment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://w1893906.users.ecs.westminster.ac.uk/webDev/shared.css">
+    <title>RAMEN Merch Shop</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="logo-wrapper">
+                <a  href="https://w1893906.users.ecs.westminster.ac.uk/webDev/home.html"><img  class="logo" src="images/logo.png" alt="RAM(e)N logo with chopsticks and noodles"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://w1893906.users.ecs.westminster.ac.uk/webDev/home.html">Home</a></li>
+                <li><a href="https://w1947697.users.ecs.westminster.ac.uk/webDev/sitemap.html">Sitemap</a></li>
+                <li><a href="https://w1840628.users.ecs.westminster.ac.uk/webDev/Quiz.html">Quiz</a></li>
+                <li><a href="https://w1941174.users.ecs.westminster.ac.uk/webDev/shop.html">Buy Products</a></li>
+                <li><a href="https://w1893906.users.ecs.westminster.ac.uk/webDev/commentsform.html">Comments Form</a></li>
+                <li><a href="https://w1840628.users.ecs.westminster.ac.uk/webDev/Studentdetails.html">About</a></li>
+                <li><a href="https://w1840628.users.ecs.westminster.ac.uk/webDev/Studentdetails.html">Student Details</a></li>
+                <li><a href="https://w1840628.users.ecs.westminster.ac.uk/webDev/Studentdetails.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="container1">
+        <p class="heading">Order Summary</p>
+        <div id="part1">
+            <p><span class="bold">Reference:</span> 24041311167000042529377</p>
+            <p><span class="bold">Description:</span> makePayment</p>
+             <!--total amount is saved in local storage and displayed here-->
+            <p><span class="bold">Amount(GBP):</span> <span id="total"></span></p>
+        </div>
+    </div>
+    <div id="container2">
+        <p class="heading">Payment details</p>
+        <p><span class="star">*</span> Indicates a required field</p>
+        <label>Accepted Cards</label>
+            <div class="icon-container">
+                <!--taken from https://www.w3schools.com/howto/howto_css_checkout_form.asp-->
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+        <div id="part2">
+            <form  action="thanks.html">
+                <div class="flexboxWrap">
+                    <div class="wrapInfo">
+                        <label for="cardnum">Credit card number<span class="star"> * </span><span id="mark"></span></label>
+                        <input type="text" id="cardnum" name="cardnumber" size="40" required>
+                        <br><br>
+                        <label for="cardname">Cardholder's name<span class="star"> *</span></label>
+                        <input type="text" id="cardname" name="cardname"  size="40" required>
+                    </div>
+                    <div class="wrapInfo">
+                        <label for="expmonth">Expiry Date<span class="star"> *</span></label>
+                        <input type="number" id="expmonth" name="expmonth" placeholder="MM" min="1" max="12" required> /
+                        <input type="number" id="expyear" name="expyear" placeholder="YY" min="2023" max="2028" required>
+                        <br><br>
+                        
+                        <label for="cvv">Security code<span class="star"> *</span></label>
+                        <div id="flexboxCard">
+                            <input type="password" id="cvv" name="cvv" size="5" required>
+                            <div id="card">
+                                <i class="fa fa-credit-card" style="font-size:25px"></i>
+                                <p> Last 3 digits on the back of card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div>
+                <p class="heading">Billing address</p>
+                <div id="billingInfo"></div>
+
+                <button id="billing">Edit</button> 
+                <div id="firstHidden" class="hidden">
+                    <div id="form-container">
+                        <label for="address1">Address 1 <span class="star">*</span></label>
+                        <input type="text" id="address1" size="100" required>
+                        <br>
+                        <label for="address2">Address 2</label>
+                        <input type="text" id="address2" size="100">
+                        <br>
+                        <label for="address3">Address 3</label>
+                        <input type="text" id="address3" size="100">
+                        <br>
+                        <label for="city">City <span class="star">*</span></label>
+                        <input type="text" id="city" required>
+                        <br>
+                        <label for="region">Region</label>
+                        <input type="text" id="region">
+                        <br>
+                        <label for="postcode">Postcode <span class="star">*</span></label>
+                        <input type="text" id="postcode" required>
+                        <br>
+                        <label for="country">Country <span class="star">*</span></label>
+                        <input type="text" id="country" required>
+                        <br><br>
+                        <button type="button" value="Save" id="hideAgain1">Save</button>
+                    </div>
+                </div>
+        
+                <p class="heading">Contact details</p>
+                <div id="contactInfo"></div>
+
+                <button id="contact">Edit</button> 
+                <div id="secondHidden" class="hidden">
+                    <div>
+                        <label for="tel">Phone number</label>
+                        <input type="tel" id="tel" size="30" required>
+                        <br>
+                        <label for="emaill">Email</label>
+                        <input type="email" id="emaill" value="" size="30" required>
+                        <br><br>
+                        
+                        <button type="button" value="Save" id="hideAgain2">Save</button>
+                    </div>
+                </div>
+                <input type="submit" value="Make a payment" id="submitButton">
+            </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p><a href="https://w1941174.users.ecs.westminster.ac.uk/webDev/aibibi_page_editor.html">Page Editor</a></p>
+    </footer>
+
+    <script>
+        // when submit button clicked, it checks whether all tags are filled
+        document.getElementById("submitButton").addEventListener("click", function() {
+            // validate form fields
+            if (validateForm()) {
+            // submit form
+            document.getElementById("myForm").submit();
+            }
+        });
+
+        function validateForm() {
+            if (email == "") {
+                return false;
+            }
+            // return true if form is valid, false otherwise
+            else return true;
+        }
+
+        // storing all ids of tag forms in variables, so its easier to check which tags are filled
+        var address1Req = document.getElementById("address1");
+        var address2Req = document.getElementById("address2");
+        var address3Req = document.getElementById("address3");
+        var cityReq = document.getElementById("city");
+        var poscodeReq = document.getElementById("postcode");
+        var countryReq = document.getElementById("country");
+        var regionReq = document.getElementById("region");
+        document.getElementById("hideAgain1").addEventListener("click",function() {
+            
+            if (address1Req.value != "" && cityReq.value != "" && poscodeReq.value != "" && countryReq.value != "" && address2Req.value != "" && address3Req.value != "" && regionReq.value != "") {
+                let line = address1Req.value + " " + address2Req.value + " " + address3Req.value + ", " + cityReq.value + ", " + regionReq.value + " " + poscodeReq.value + " " + countryReq.value;
+                document.getElementById("billingInfo").innerHTML = line;
+            }
+            else if (address1Req.value != "" && cityReq.value != "" && poscodeReq.value != "" && countryReq.value != "") {
+                line = address1Req.value + ", " + cityReq.value + ", " + poscodeReq.value + " " + countryReq.value;
+                if (address2Req.value != "") {
+                    line = address1Req.value + " " + address2Req.value + ", " + cityReq.value + ", " + poscodeReq.value + " " + countryReq.value;
+                    if (regionReq.value != "") {
+                        line = address1Req.value + " " + address2Req.value + ", " + cityReq.value + ", " + regionReq.value + ", " + poscodeReq.value + " " + countryReq.value;
+                    }
+                }
+                else if (address3Req.value != "") {
+                    line = address1Req.value + " " + address3Req.value + ", " + cityReq.value + ", " + poscodeReq.value + " " + countryReq.value;
+                    if (regionReq.value != "") {
+                        line = address1Req.value + " " + address3Req.value + ", " + cityReq.value + ", " + regionReq.value + ", " + poscodeReq.value + " " + countryReq.value;
+                    }
+                }
+                document.getElementById("billingInfo").innerHTML = line;
+            }
+            // if user didn't input anythin, this text will show up
+            else {
+                line = "Please input your billing address."
+                document.getElementById("billingInfo").innerHTML = line;
+            }
+
+        });
+
+        // doing same with phone number and email
+        var telReq = document.getElementById("tel");
+        var emailReq = document.getElementById("emaill");
+        document.getElementById("hideAgain2").addEventListener("click",function() {
+            if (telReq.value != "" && emailReq.value != "") {
+                let line2 = telReq.value + ", " + emailReq.value;
+                document.getElementById("contactInfo").innerHTML = line2;
+            }
+            else if (emailReq.value != "") {
+                line2 = emailReq.value;
+                document.getElementById("contactInfo").innerHTML = line2;
+            }
+            else if (telReq.value != "") {
+                line2 = telReq.value;
+                document.getElementById("contactInfo").innerHTML = line2;
+            }
+            else {
+                line2 = "Please input your contact details."
+                document.getElementById("contactInfo").innerHTML = line2;
+            }
+
+        });
+
+        // checks if user input the card number correctly (16 digits)
+        // if yes - green border, check icon. if not - red border, cross icon
+        document.getElementById("cardnum").addEventListener("change",function() {
+            if (document.getElementById("cardnum").value == "" || document.getElementById("cardnum").value.length < 16 || document.getElementById("cardnum").value.length > 16) {
+                document.getElementById("mark").innerHTML = "&#10006";
+                document.getElementById("mark").classList.add("incorrect");
+                document.getElementById('cardnum').classList.add('invalid');
+                document.getElementById('cardnum').classList.remove('valid');
+                document.getElementById("mark").classList.remove("correct");
+            }
+            else if(document.getElementById("cardnum").value.length == 16) {
+                document.getElementById("mark").innerHTML = "&#10004;";
+                document.getElementById("mark").classList.add("correct");
+                document.getElementById('cardnum').classList.add('valid');
+                document.getElementById('cardnum').classList.remove('invalid');
+                document.getElementById("mark").classList.remove("incorrect");
+            }
+        });
+
+        // the billing address form has hidden calss, it will be removed on click
+        document.getElementById("billing").addEventListener("click",function() {
+            document.getElementById("firstHidden").classList.remove("hidden");
+        });
+
+        // when edit button is clicked, the "edit" will change to "close"
+        // otherwise it stays "edit" and hides form content
+        document.getElementById("billing").addEventListener("click", function() {
+            if (document.getElementById("billing").textContent === "Edit") {
+                document.getElementById("billing").textContent = "Close";
+            } 
+            else {
+                document.getElementById("billing").textContent = "Edit";
+                document.getElementById("firstHidden").classList.add("hidden");
+            }
+        });
+
+        // "hideAgain1" is the Save button, when user clicks it the form will get hidden again
+        // and the edit button changes its text content into "edit" again
+        document.getElementById("hideAgain1").addEventListener("click",function() {
+            document.getElementById("firstHidden").classList.add("hidden");
+            document.getElementById("billing").textContent = "Edit";
+        });
+
+        // the contact info form has hidden calss, it will be removed on click
+        document.getElementById("contact").addEventListener("click",function() {
+            document.getElementById("secondHidden").classList.remove("hidden");
+        });
+
+        // when edit button is clicked, the "edit" will change to "close"
+        // otherwise it stays "edit" and hides form content
+        document.getElementById("contact").addEventListener("click", function() {
+            if (document.getElementById("contact").textContent === "Edit") {
+                document.getElementById("contact").textContent = "Close";
+            } 
+            else {
+                document.getElementById("contact").textContent = "Edit";
+                document.getElementById("secondHidden").classList.add("hidden");
+            }
+        });
+
+        // "hideAgain2" is the Save button, when user clicks it the form will get hidden again
+        // and the edit button changes its text content into "edit" again
+        document.getElementById("hideAgain2").addEventListener("click",function() {
+            document.getElementById("secondHidden").classList.add("hidden");
+            document.getElementById("contact").textContent = "Edit";
+        });
+
+        // https://www.youtube.com/watch?v=x0VcigW9kN0&ab_channel=OpenJavaScript
+        // taking email and total from localStorage
+        const email = localStorage.getItem("email");
+        const total = localStorage.getItem("total");
+
+        // saving the saved data from storae into the ids i need
+        document.getElementById("emaill").value = email;
+        document.getElementById("total").textContent = total;
+
+        // clearing data from localStorage
+        localStorage.removeItem("email");
+        localStorage.removeItem("total");
+
+        let emailField = document.getElementById("emaill");
+        emailField.value = email;
+
+        let totalField = document.getElementById("total");
+        totalField.value = total;
+    </script>
+</body>
+</html>

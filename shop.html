@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styleShop.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://w1893906.users.ecs.westminster.ac.uk/webDev/shared.css">
+    <title>RAMEN Merch Shop</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="logo-wrapper">
+                <a  href="https://w1893906.users.ecs.westminster.ac.uk/webDev/home.html"><img  class="logo" src="images/logo.png" alt="RAM(e)N logo with chopsticks and noodles"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://w1893906.users.ecs.westminster.ac.uk/webDev/home.html">Home</a></li>
+                <li><a href="https://w1947697.users.ecs.westminster.ac.uk/webDev/sitemap.html">Sitemap</a></li>
+                <li><a href="https://w1840628.users.ecs.westminster.ac.uk/webDev/Quiz.html">Quiz</a></li>
+                <li><a href="https://w1941174.users.ecs.westminster.ac.uk/webDev/shop.html">Buy Products</a></li>
+                <li><a href="https://w1893906.users.ecs.westminster.ac.uk/webDev/commentsform.html">Comments Form</a></li>
+                <li><a href="https://w1840628.users.ecs.westminster.ac.uk/webDev/Studentdetails.html">About</a></li>
+                <li><a href="https://w1840628.users.ecs.westminster.ac.uk/webDev/Studentdetails.html">Student Details</a></li>
+                <li><a href="https://w1840628.users.ecs.westminster.ac.uk/webDev/Studentdetails.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>RAM(E)N - Online Merchandise Shop</h1>
+        <div class="twoProducts">
+            <div class="product" id="product1">
+                <img src="images/tshirt.png" alt="white t-shirt with ramen logo" id="tshirt">
+                <div class="description">
+                    <p>ram(e)n t-shirt</p>
+                    <div class="price">
+                        <p>	&#163;15</p>
+                        <div class="quantity">
+                            <form>
+                                <select name="quantity" id="quantity1" onChange="displayQuantity(this.value)">
+                                    <option value=0 selected>0</option>
+                                    <option value=15>1</option>
+                                    <option value=30>2</option>
+                                    <option value=45>3</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="twoProducts">
+            <div class="product" id="product2">
+                <img src="images/sweatshirt.png" alt="white sweatshirt with ramen logo" id="sweatshirt">
+                <div class="description">
+                    <p>ram(e)n sweatshirt</p>
+                    <div class="price">
+                        <p>	&#163;25</p>
+                        <div class="quantity">
+                            <form>
+                                <select name="quantity" id="quantity2" onChange="displayQuantity(this.value)">
+                                    <option value=0 selected>0</option>
+                                    <option value=25>1</option>
+                                    <option value=50>2</option>
+                                    <option value=75>3</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" id="product3">
+            <img src="images/bottle.png" alt="drinking cup with ramen logo" id="bottle">
+            <div class="description">
+                <p>ram(e)n drinking cup</p>
+                <div class="price">
+                    <p>	&#163;10</p>
+                    <div class="quantity">
+                        <form>
+                            <select name="quantity" id="quantity3" onChange="displayQuantity(this.value)">
+                                <option value=0 selected>0</option>
+                                <option value=10>1</option>
+                                <option value=20>2</option>
+                                <option value=30>3</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" id="product4">
+            <img src="images/shopper.png" alt="shopper with ramen logo" id="shopper">
+            <div class="description">
+                <p>ram(e)n tote bag</p>
+                <div class="price">
+                    <p>	&#163;10</p>
+                    <div class="quantity">
+                        <form>
+                            <select name="quantity" id="quantity4" onChange="displayQuantity(this.value)">
+                                <option value=0 selected>0</option>
+                                <option value=10>1</option>
+                                <option value=20>2</option>
+                                <option value=30>3</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" id="product5">
+            <img src="images/sticker.png" alt="sticker with ramen logo" id="sticker">
+            <div class="description">
+                <p>ram(e)n sticker</p>
+                <div class="price">
+                    <p>	&#163;2</p>
+                    <div class="quantity">
+                        <form>
+                            <select name="quantity" id="quantity5" onChange="displayQuantity(this.value)">
+                                <option value=0 selected>0</option>
+                                <option value=2>1</option>
+                                <option value=4>2</option>
+                                <option value=6>3</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" id="product6">
+            <img src="images/mug.png" alt="mug with ramen logo" id="mug">
+            <div class="description">
+                <p>ram(e)n mug</p>
+                <div class="price">
+                    <p>	&#163;5</p>
+                    <div class="quantity">
+                        <form>
+                            <select name="quantity" id="quantity6" onChange="displayQuantity(this.value)">
+                                <option value=0 selected>0</option>
+                                <option value=5>1</option>
+                                <option value=10>2</option>
+                                <option value=15>3</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="order">
+            Your Oder: <br>
+            Basket
+            <div id="list">
+                List:
+                <div id="basketList">
+                    <p><span id="selectedProduct1">0</span>x t-shirt = &#163; <span id="tShirtCount">0</span></p>
+                    <p><span id="selectedProduct2">0</span>x sweatshirt = &#163; <span id="sShirtCount">0</span></p>
+                    <p><span id="selectedProduct3">0</span>x bottle =  &#163; <span id="bottleCount">0</span></p>
+                    <p><span id="selectedProduct4">0</span>x tote bag =  &#163; <span id="shopperCount">0</span></p>
+                    <p><span id="selectedProduct5">0</span>x sticker =  &#163; <span id="stickCount">0</span></p>
+                    <p><span id="selectedProduct6">0</span>x mug =  &#163; <span id="cupCount">0</span></p>
+                    <p>Express Delivery = &#163; <span id="deliveryPrice">0</span></p>
+                </div>
+                <p>Total:</p>
+                <p>	&#163; <span id="total">0</span></p>
+
+            </div>
+        </div>
+
+        <form onReset="resetOrder()" onsubmit="saveOrder(event)" id="details">
+            <div id="details2">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" required> <br>
+                
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required> <br>
+
+                <label for="delivery">Expreess Delivery</label>
+                <input type="checkbox" name="delivery" id="delivery" 
+                value=20> <br>
+
+                <input type="reset" name="button" value="Clear your order">
+                <input type="submit" name="sendButton" value="Place your order" id="submitButton" disabled>
+            </div>
+        </form> 
+    </div>
+    <footer>
+        <p><a href="https://w1941174.users.ecs.westminster.ac.uk/webDev/aibibi_page_editor.html">Page Editor</a></p>
+    </footer>
+    
+
+    <script>
+        let total = 0;
+
+        // get the value of selected option
+        function getSelectedValue( selectList ) {
+            return selectList[ selectList.selectedIndex ].value;
+        }
+
+        // get the text of selected option
+        function getSelectedText( selectList ) {
+            return selectList.options[ selectList.selectedIndex ].text;
+        }
+
+        function displayQuantity(value) {
+            // storing all of the text of options, to use them as a quantity
+            let tShirt = getSelectedText(document.getElementById("quantity1"));
+            let sShirt = getSelectedText(document.getElementById("quantity2"));
+            let bottle = getSelectedText(document.getElementById("quantity3"));
+            let shopper = getSelectedText(document.getElementById("quantity4"));
+            let sticker = getSelectedText(document.getElementById("quantity5"));  
+            let cup = getSelectedText(document.getElementById("quantity6"));
+
+            // storing all of the value of options, to use them as a price
+            let tPrice = getSelectedValue(document.getElementById("quantity1"));
+            let sPrice = getSelectedValue(document.getElementById("quantity2"));
+            let bottlePrice = getSelectedValue(document.getElementById("quantity3"));
+            let shopperPrice = getSelectedValue(document.getElementById("quantity4"));
+            let stickPrice = getSelectedValue(document.getElementById("quantity5"));  
+            let cupPrice = getSelectedValue(document.getElementById("quantity6"));
+
+            // taking ids in a basket list and changing them according to users selection
+            document.getElementById("selectedProduct1").innerHTML = tShirt;
+            document.getElementById("tShirtCount").innerHTML = tPrice;
+            document.getElementById("selectedProduct2").innerHTML = sShirt;
+            document.getElementById("sShirtCount").innerHTML = sPrice;
+            document.getElementById("selectedProduct3").innerHTML = bottle;
+            document.getElementById("bottleCount").innerHTML = bottlePrice;
+            document.getElementById("selectedProduct4").innerHTML = shopper;
+            document.getElementById("shopperCount").innerHTML = shopperPrice;
+            document.getElementById("selectedProduct5").innerHTML = sticker;
+            document.getElementById("stickCount").innerHTML = stickPrice;
+            document.getElementById("selectedProduct6").innerHTML = cup;
+            document.getElementById("cupCount").innerHTML = cupPrice;
+
+            // counting the total price
+            total = parseInt(tPrice) + parseInt(sPrice) + parseInt(bottlePrice) + parseInt(shopperPrice) + parseInt(stickPrice) + parseInt(cupPrice);
+            document.getElementById("total").innerHTML = total;
+
+            // when delivery option changes, the total price increased or decreased by 20
+            document.getElementById("delivery").addEventListener("change", function() {
+                const deliveryPrice = 20;
+                const isDeliveryChecked = document.getElementById("delivery").checked;
+                const isDeliveryPreviouslyChecked = document.getElementById("deliveryPrice").innerHTML === deliveryPrice.toString();
+
+                if (isDeliveryChecked && !isDeliveryPreviouslyChecked) {
+                    document.getElementById('deliveryPrice').innerHTML = deliveryPrice;
+                    total += deliveryPrice;
+                    document.getElementById("total").innerHTML = total;
+                }
+                else if (!isDeliveryChecked && isDeliveryPreviouslyChecked) {
+                    document.getElementById('deliveryPrice').innerHTML = 0;
+                    total -= deliveryPrice;
+                    document.getElementById("total").innerHTML = total;
+                }
+            });
+
+            // calling the button function
+            button();
+        }
+
+        // resets everything that user has selected
+        function resetOrder() {
+            document.getElementById("selectedProduct1").innerHTML = 0;
+            document.getElementById("selectedProduct2").innerHTML = 0;
+            document.getElementById("selectedProduct3").innerHTML = 0;
+            document.getElementById("selectedProduct4").innerHTML = 0;
+            document.getElementById("selectedProduct5").innerHTML = 0;
+            document.getElementById("selectedProduct6").innerHTML = 0;
+
+            document.getElementById("tShirtCount").innerHTML = 0;
+            document.getElementById("sShirtCount").innerHTML = 0;
+            document.getElementById("bottleCount").innerHTML = 0;
+            document.getElementById("shopperCount").innerHTML = 0;
+            document.getElementById("stickCount").innerHTML = 0;
+            document.getElementById("cupCount").innerHTML = 0;
+
+            document.getElementById("quantity1").value = 0;
+            document.getElementById("quantity2").value = 0;
+            document.getElementById("quantity3").value = 0;
+            document.getElementById("quantity4").value = 0;
+            document.getElementById("quantity5").value = 0;  
+            document.getElementById("quantity6").value = 0;
+
+            total = total - total;
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("submitButton").disabled = false;
+        }
+
+        // the "Place your order" button will not work, until user selects at least one product
+        function button() {
+            if (total == 0) {
+                document.getElementById("submitButton").disabled = true;
+            }
+            else {
+                document.getElementById("submitButton").disabled = false;
+            }
+        }
+
+        // https://www.youtube.com/watch?v=x0VcigW9kN0&ab_channel=OpenJavaScript
+        // saved information will be stored to be displayed on other page
+        function saveOrder(event) {
+            // preventing from refreshing itself
+            event.preventDefault();
+
+            // Getting data from the form
+            const email = document.getElementById("email").value;
+            const total = document.getElementById("total").textContent;
+
+            // Storing email and total number in a storage
+            localStorage.setItem("email", email);
+            localStorage.setItem("total", total);
+            console.log(email);
+            console.log(total);
+
+            // Redirect to order checkout page
+            window.location.href = "payment.html";
+        }
+        
+    </script>
+
+
+</body>
+</html>

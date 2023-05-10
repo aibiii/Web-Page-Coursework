@@ -1,0 +1,128 @@
+header {
+    background-color: #F9DCC4;
+    padding: 90px;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #F9DCC4;
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 250px;
+    height: auto;
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+    
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-links a {
+    color: #DB6042;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #DB6042;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s; 
+  } 
+  
+  .nav-links li:hover::after {
+    width: 100%;
+  }
+  
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #F8EDEB;
+  }
+  
+  
+  .gallery {
+    padding: 16px;
+  }
+  
+  .card {
+    width: 49.75%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 16px;
+  }
+  .card img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card img:hover {
+    opacity: 0.5;
+  }
+  
+  .card h2 {
+    display: inline-block;
+    margin: 8px 0 16px 0;
+    font-weight: 300;
+  }
+  
+  .about {
+    width: 40%;
+    min-width: 600px;
+    margin: 100px 0 100px 200px;
+  }
+  
+  .about h3 {
+    font-size: 40px;
+    font-weight: 300;
+  }
+  .contact {
+    margin-top: 100px;
+  }
+  
+  .contact p {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .cta {
+    border-bottom: 1px solid black;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-top: 0;
+  }
